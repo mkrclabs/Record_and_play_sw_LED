@@ -1,0 +1,36 @@
+# STM32 BluePill LED/Switch Controller
+
+## Project Description
+Firmware for STM32F103C6T6 (Blue Pill) that controls GPIOB LEDs based on GPIOA switch inputs.
+
+## Features
+- Toggles all LEDs when any switch is pressed
+- Hardware debouncing
+- Efficient polling implementation
+
+## Hardware Requirements
+- STM32F103C6T6 (Blue Pill)
+- 7x Tactile switches (GPIOA)
+- 7x LEDs + 220Ω resistors (GPIOB)
+
+## Pin Connections
+| MCU Pin | Connection  |
+|---------|-------------|
+| PA0-PA6 | Switches to GND |
+| PB3-PB9 | LED anodes |
+
+## Build Instructions
+1. Clone repository:
+   ```bash
+   git clone https://github.com/yourusername/STM32-BluePill-LED-Switch.git
+   ```
+2. Open with STM32CubeIDE
+3. Build project (Project → Build All)
+4. Flash to device
+
+## Usage
+1. Press any switch (PA0-PA6)
+2. All LEDs (PB3-PB9) will toggle
+
+## License
+MIT License - see LICENSE file for details
